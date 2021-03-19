@@ -1,0 +1,42 @@
+@import '../assets/scss/color.scss';
+@import '../assets/scss/font.scss';
+
+
+
+.card {
+
+    //letter-spacing: 1px;
+    background-color: #101025!important;
+    border:  0px !important;
+    width: 90%!important;
+    margin-left: 10%;
+
+    .card-title {
+        .card-link {
+            font-size: 32px;
+            color: $orange!important;
+        }
+
+    }
+    .info-rep {
+        margin: 2px 0 2px 0;
+        color: $softCyan;
+        .card-link {
+            color:$darkGrayishBlue2;
+        }
+    }
+    .line {
+        border-bottom: 1px solid $white;
+
+    }
+    p{
+        color: $white!important;
+        font-size: 16px;
+    }
+    img {
+        margin-right: 30px;
+    }
+
+
+
+}

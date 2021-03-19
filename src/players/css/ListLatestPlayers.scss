@@ -1,0 +1,22 @@
+@import '../../assets/scss/color.scss';
+@import '../../assets/scss/font.scss';
+
+
+.list-latest-players {
+    font-family: 'lato-bold';
+    .list {
+        border-radius: 2px;
+
+        p {
+            text-align: center;
+            margin-bottom: 8px;
+        }
+    }
+
+    .list-group-item {
+        background-color: rgba(188, 190, 192, 0.4)!important;
+        color: white;
+    }
+    
+   
+}

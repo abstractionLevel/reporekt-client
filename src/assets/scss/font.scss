@@ -1,0 +1,31 @@
+$font1: '../../assets/font';
+$font2: '../../assets/font/montserrat';
+
+
+@font-face{
+    font-family: 'Inconsolata';
+    src: url('#{$font1}/Inconsolata-Regular.ttf');
+}
+@font-face{
+    font-family: 'Monospace';
+    src: url('#{$font1}/Monospace-Regular.ttf');
+}
+@font-face{
+    font-family: 'RetroGame';
+    src: url('#{$font1}/Retro-Gaming.ttf');
+}
+
+@font-face{
+    font-family: 'lato-bold';
+    src: url('#{$font1}/Lato-Bold.ttf');
+}
+
+@font-face{
+    font-family: 'lato-regular';
+    src: url('#{$font1}/Lato-Regular.ttf');
+}
+
+@font-face{
+    font-family: 'montserrat-SemiBold';
+    src: url('#{$font2}/Montserrat-Italic.ttf');
+}

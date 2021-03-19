@@ -1,0 +1,10 @@
+{
+"/api/v1/reports/players/1": "/reports",
+"/api/public/v1/players/latest": "/latestPlayers",
+"/api/public/v1/players/top": "/topPlayers",
+"/api/public/v1/reportsType/players/1": "/reportsType",
+"/api/public/v1/reportsType/regions/euw": "/reportsTypeRegion",
+"/api/public/v1/comments": "/comments",
+"/api/public/v1/comments/1": "/comments"
+
+}

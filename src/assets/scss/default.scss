@@ -1,0 +1,31 @@
+@import 'font.scss';
+
+body {
+    height: 100%;
+    background-color:#191937!important;
+}
+.CookieConsent {
+    position: absolute;
+    z-index: 9999!important;
+}
+.declineButton,.acceptButton {
+    width: 100px;
+    height: 32px;
+    padding: 0px!important;
+    color: black!important;
+    text-align:center;
+    font-size: 16px!important;
+
+}
+.declineButton {
+    background: red!important;
+
+}
+.acceptButton {
+    background: yellow!important;
+}
+p {
+    color: #FFA500!important;
+  }
+
+
