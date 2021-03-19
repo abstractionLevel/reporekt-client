@@ -27,7 +27,6 @@ const HomePage = () => {
                 </Col>
                 <Col className='col-md-5 list-reportType'>
                     <h5 className="">All Report Type of Region</h5>
-                    <PieChartReportsTypeOfRegion />
                 </Col>
             </Row>
         </Container>
