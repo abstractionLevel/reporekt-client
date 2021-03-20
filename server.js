@@ -1,16 +1,11 @@
-var express = require('express')
-var fs = require('fs')
-var https = require('https')
-var app = express()
+const express = require('express');
+const path = require('path');
+const app = express();
+
+app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('/*', function (req, res) {
-  res.send('hello world')
-})
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
-https.createServer({
-  key: fs.readFileSync('server.key'),
-  cert: fs.readFileSync('server.cert')
-}, app)
-.listen(3000, function () {
-  console.log('Example app listening on port 3000! Go to https://localhost:3000/')
-})
+app.listen(9000);
