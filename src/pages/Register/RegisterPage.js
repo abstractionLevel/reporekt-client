@@ -16,7 +16,6 @@ import './RegisterPage.scss';
 
 const RegisterPage = (props) => {
 
-
     const iconCheck = <FontAwesomeIcon icon={faCheck} />;
     const iconFail = <FontAwesomeIcon icon={faTimes} />;
     const { register, errors, handleSubmit, watch } = useForm({});
