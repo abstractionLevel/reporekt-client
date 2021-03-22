@@ -72,13 +72,7 @@ const RegisterPage = (props) => {
         }
 
         if (usernameAlreadyExist === false && emailAlreadyExists === false) {
-            props.history.push({
-                pathname: '/message',
-                state: {
-                    successful: true,
-                    email: data.email
-                }
-            });
+            
         }
 
 
