@@ -64,7 +64,7 @@ const CookiePolicy = (props) => {
                     <Form>
                         <div>
                             <p className="text">We & our technology partners ask you to consent to the use of cookies to store and access personal data on your device. By clicking below you are consenting to the use of this technology.</p>
-                            <a href="/#/cookie-policy">Cookie Policy</a>
+                            <a href="/cookie-policy">Cookie Policy</a>
                             <br />
                         </div>
                         <Form.Check className="mt-4" inline disabled checked label="Necessary" type={type} />

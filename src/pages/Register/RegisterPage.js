@@ -3,8 +3,6 @@ import { useForm } from "react-hook-form";
 import { Col, Container, Row } from 'react-bootstrap';
 import ReCAPTCHA from "react-google-recaptcha";
 import SETTINGS from "../../utility/settings";
-import IconOk from "../../assets/img/pass.png";
-import IconFail from "../../assets/img/fail.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck, faTimes } from "@fortawesome/free-solid-svg-icons";
 
@@ -14,7 +12,6 @@ import AuthService from '../../service/auth.service';
 
 //scss
 import './RegisterPage.scss';
-import { response } from "express";
 
 
 const RegisterPage = (props) => {
@@ -73,7 +70,7 @@ const RegisterPage = (props) => {
         }
 
         if (usernameAlreadyExist === false && emailAlreadyExists === false) {
-            AuthService.register(data.username, data.email, data.password, tokenCaptcha).then(
+            AuthService.register(data.username, data.email, data.password,data.confirmPassword, tokenCaptcha).then(
                 (response) => {
                     props.history.push({
                         pathname: '/message',
