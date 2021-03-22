@@ -14,6 +14,7 @@ import AuthService from '../../service/auth.service';
 
 //scss
 import './RegisterPage.scss';
+import { response } from "express";
 
 
 const RegisterPage = (props) => {
@@ -72,7 +73,18 @@ const RegisterPage = (props) => {
         }
 
         if (usernameAlreadyExist === false && emailAlreadyExists === false) {
-            
+            AuthService.register(data.username, data.email, data.password, tokenCaptcha).then(
+                (response) => {
+                    props.history.push({
+                        pathname: '/message',
+                        state: {
+                            successful: true,
+                            email: data.email
+                        }
+                    });
+                }
+            )
+
         }
 
 
