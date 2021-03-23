@@ -113,8 +113,12 @@ const RegisterPage = (props) => {
                                         value: 3,
                                         message: "username must have at least 3 characters"
                                     },
+                                    maxLength: {
+                                        value: 16,
+                                        message: "The username must have a maximum of 16 characters"
+                                    },
                                     pattern: {
-                                        value: /^[a-zA-Z0-9_]+$/,
+                                        value: /^[a-zA-Z0-9_ ]+$/,
                                         message: "No Speacial Characters"
                                     },
 

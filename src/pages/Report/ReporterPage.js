@@ -42,9 +42,13 @@ const ReporterPage = (props) => {
                             className="form-control mb-2"
                             type="text"
                             ref={register({
-                                pattern: {
-                                    value: /^[a-zA-Z0-9_]+$/,
-                                    message: "No Special Characters"
+                                minLength: {
+                                    value: 3,
+                                    message: "nickname must have at least 3 characters"
+                                },
+                                maxLength: {
+                                    value: 16,
+                                    message: "nickname must have a maximum of 16 characters"
                                 },
                                 required: "You must specify an nickname"
                             })}

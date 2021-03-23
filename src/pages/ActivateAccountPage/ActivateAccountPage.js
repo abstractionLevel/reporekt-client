@@ -14,7 +14,7 @@ const ActivateAccountPage = () => {
         AuthService.activateAccount(token).then(
             (response) => {
                 if(response===200) {
-                    setSuccessful(<div className="alert alert-success">Account activated: <a href="/#/login" className="activate-account-login">LOGIN</a></div>)
+                    setSuccessful(<div className="alert alert-success">Account activated: <a href="/login" className="activate-account-login">LOGIN</a></div>)
                 }
                 if(response===401) {
                     setSuccessful(<div className="alert alert-danger">Token expired, Please signup again</div>)
