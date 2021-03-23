@@ -2,7 +2,6 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useForm } from "react-hook-form";
 import AuthService from '../../service/auth.service';
 import './UpdatePassword.scss';
-import { useHistory } from "react-router"
 
 
 const UpdatePassword = () => {
@@ -18,7 +17,6 @@ const UpdatePassword = () => {
 
     passwordWatched.current = watch("password", "")
 
-    let history = useHistory()
 
     var regularExpression = /[0-9]/;
 

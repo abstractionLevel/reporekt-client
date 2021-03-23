@@ -3,8 +3,6 @@ import { useForm } from 'react-hook-form';
 import AuthService from '../../service/auth.service';
 import './FormLogin.scss';
 import { useHistory } from "react-router"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEye } from "@fortawesome/free-solid-svg-icons";
 import iconVisibile from "../../assets/img/eyevisible.png";
 import iconInvisibile from "../../assets/img/eyeinvisible.png";
 
@@ -12,7 +10,6 @@ import iconInvisibile from "../../assets/img/eyeinvisible.png";
 
 const FormLogin = (props) => {
 
-    const eye = <FontAwesomeIcon icon={faEye} />;
 
     let history = useHistory()
     const { register, errors, handleSubmit } = useForm({});

@@ -1,4 +1,3 @@
-import { render } from '@testing-library/react';
 import React, { useState, useEffect } from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
@@ -12,7 +11,6 @@ const CookiePolicy = (props) => {
 
     const isAcconsentCookie = props.cookieAcconsent
     const type = "checkbox"
-    const [showRegionModal, setShowRegionModal] = useState(false)
     const [marketing, setMarketing] = useState(true);
     const [preference, setPreference] = useState(true);
     const [statistics, setStatistics] = useState(true);

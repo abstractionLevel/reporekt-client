@@ -11,15 +11,13 @@ import LoggedRouter from './utility/LoggedRouter';
 import ContactUsPage from './pages/ContactUs/ContactUsPage'
 import CookiePolicyPage from './pages/CookiePolicy/CookiePolicyPage'
 import ActivateAccountPage from './pages/ActivateAccountPage/ActivateAccountPage'
-import React, { useState, useEffect, HashRouter } from "react";
+import React, { useState, useEffect } from "react";
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import PasswordForgotPage from './pages/PasswordForgotPage/PasswordForgotPage';
 import EmailForgotPasswordPage from './pages/EmailForgotPasswordPage/EmailForgotPasswordPage';
 import Cookies from 'js-cookie';
 import CookiePolicy from './component/CookiePolicy/CookiePolicy'
 import SETTINGS from './utility/settings';
-import ReactGA from "react-ga";  //Google Analytics 
-import { createBrowserHistory } from 'history';
 
 //class
 import './assets/scss/default.scss';
@@ -37,7 +35,6 @@ const App = (props) => {
     const [currentUser, setCurrentUser] = useState(undefined);
 
 
-    const history = createBrowserHistory();
 
 
 

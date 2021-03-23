@@ -11,7 +11,6 @@ const CardReportsOfPlayer = (props) => {
 
 
     
-    const token = localStorage.getItem("userToken");
 
     const username = props.username;
 
@@ -58,7 +57,6 @@ const CardReportsOfPlayer = (props) => {
 
      useEffect(() => {
         getData()
-        var name = document.getElementsByClassName('porcodio')[0];
 
     }, [offset])
 

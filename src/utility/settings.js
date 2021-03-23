@@ -8,9 +8,9 @@ const DOMAIN_NAME_LOCAL = "";
 const DOMAIN_NAME_PRODUCTION = ".reporekt.com";
 
 const Settings = {
-    KEY_CAPTCHA:PRODUCTION_KEY,
-    SERVER_PROXY:SERVER_PROXY_PRODUCTION,
-    DOMAIN_NAME: DOMAIN_NAME_PRODUCTION                                                                  
+    KEY_CAPTCHA:LOCAL_KEY,
+    SERVER_PROXY:SERVER_PROXY_LOCAL,
+    DOMAIN_NAME: DOMAIN_NAME_LOCAL                                                                  
                 
   }
 export default Settings;

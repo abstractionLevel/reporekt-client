@@ -22,10 +22,7 @@ const RegisterPage = (props) => {
 
     const passwordWatched = useRef({});
 
-    const [username, setUsername] = useState("");
-    const [password, setPassword] = useState("");
-    const [email, setEmail] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
+   
     const [usernameAlreadyExist, setUsernameAlreadyExist] = useState();
     const [emailAlreadyExists, setEmailAlreadyExists] = useState();
     const [disableSubmit, setDisableSubmit] = useState(true);

@@ -6,10 +6,9 @@ import Nav from 'react-bootstrap/Nav';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 import Dropdown from 'react-bootstrap/Dropdown';
-import { regions } from '../utility/serverRegionConstant';
 import ImageSettings from '../assets/img/settings.png';
 import ImageLogin from '../assets/img/login.png';
-import { images } from '../utility/regionImage';
+import IMAGES from '../utility/regionImage';
 import SearchImage from '../assets/img/search2.png';
 import { Link, useHistory } from 'react-router-dom';
 
@@ -82,7 +81,12 @@ const MyNavBar = (props) => {
         setShowSearchPlayer(true)
     }
 
-
+    function importAll(r) {
+        let images = {};
+        r.keys().map((item, index) => { images[item.replace('./', '')] = r(item); });
+        return images;
+      }
+    const images = importAll(require.context('../assets/img/region/', false, /\.(png|jpe?g|svg)$/));
 
 
 
@@ -133,6 +137,8 @@ const MyNavBar = (props) => {
         if (!userRegion && acconsentCookie != undefined) {
             setShowRegionModal(true)
         }
+      
+        console.log("dio cane")
     }, [user]);
 
 
@@ -205,6 +211,7 @@ const MyNavBar = (props) => {
                                 </div>
                             </div>
                         )}
+                        
                 </Nav>
             </Navbar.Collapse>
             <Modal show={showRegionModal} size="sm" onHide={onHideRegionModal} >
@@ -213,14 +220,13 @@ const MyNavBar = (props) => {
                         <div className="d-flex justify-content-center">
                             <h4 className="mb-1 ">Select Region</h4>
                         </div>
-                        {regions.map((region) =>
+                        {Object.entries(IMAGES).map(([key, value]) =>
                             <div>
                                 <div className="d-inline"></div>
                                 <div className="d-inline">
-                                    <Button variant="outline-dark" className="mb-2" size="sm" value={region} block onClick={onClickRegionModal}>
-                                        <img className="float-left" src={images[region + '.png']}></img>
-                                        {region}
-
+                                    <Button variant="outline-dark" className="mb-2" size="sm" value={key} block onClick={onClickRegionModal}>
+                                        <img className="float-left" src={value}/>
+                                        {key}
                                     </Button>
                                 </div>
                             </div>
