@@ -138,7 +138,6 @@ const MyNavBar = (props) => {
             setShowRegionModal(true)
         }
       
-        console.log("dio cane")
     }, [user]);
 
 
