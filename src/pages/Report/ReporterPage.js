@@ -7,18 +7,25 @@ import { reportsType } from '../../utility/reportsTypeConstant';
 const ReporterPage = (props) => {
 
     const { register, errors, handleSubmit } = useForm({});
-    const [isMessage, setMessage] = useState(false)
+    const [message, setMessage] = useState(" ")
+    const [isMessage, setIsMessage] = useState(false)
 
 
 
     const onSubmit = data => {
         ReportService.doReport(data.nickname, data.reportType, data.description).then(
             (response) => {
+                console.log(response)
                 if (response === 200) {
                     props.history.push(encodeURI("/player/" + data.nickname));
                 }
                 if (response === 401) {
-                    setMessage(true)
+                    setIsMessage(true)
+                    setMessage("RIP: ACCOUNT BANNED")
+                }
+                if(response === 404) {
+                    setIsMessage(true)
+                    setMessage("PLEASE DO LOGOUT")
                 }
             }
         );
@@ -26,15 +33,13 @@ const ReporterPage = (props) => {
     };
 
     useEffect(() => {
-    }, [isMessage])
+    }, [message])
 
     return (
         <Container flui>
-
             <Row className="justify-content-md-center">
                 <Col className="col-lg-8 form-login">
-                    {isMessage}
-                     {isMessage ==true && <div className="alert alert-danger"><h3>PLEASE DO LOGOUT</h3></div>}
+                     {isMessage && <div className="alert alert-danger"><h3>{message}</h3></div>}
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <input
                             name="nickname"

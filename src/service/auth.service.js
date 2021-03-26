@@ -89,12 +89,13 @@ const login = (username, password) => {
             password,
         })
         .then((response) => {
-
+            console.log(response)
             if (response.data) {
                 setCurrentUser(response.data)
                 return response;
             }
-
+        }).catch((error)=> {
+            return error.response;
         });
 };
 
